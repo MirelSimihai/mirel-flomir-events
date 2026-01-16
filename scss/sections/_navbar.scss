@@ -1,0 +1,22 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.menu {
+  @include gradient;
+  #flomirEvents {
+    color: white;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: xx-large;
+  }
+
+  li {
+    padding: 0 0.7rem;
+
+    a {
+      color: $white !important;
+      text-transform: capitalize;
+      font-weight: 600;
+    }
+  }
+}

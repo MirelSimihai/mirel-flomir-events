@@ -11859,5 +11859,165 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+#phone-btn {
+  background: #fff;
+  color: #9926f0;
+  padding: 0.5rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+#phone-btn:hover {
+  background: linear-gradient(to right, #9926f0, #d122e3);
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(209, 34, 227, 0.35);
+}
+
+#phone-btn:active {
+  transform: scale(0.97);
+}
+
+#phone-btn i {
+  font-size: 1.1rem;
+}
+
+/* Call button – slide hover from intro section*/
+.btn-call-slide {
+  background: #fff;
+  color: #9926f0;
+  border-radius: 50px;
+  padding: 0.75rem 1.8rem;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.btn-call-slide:hover {
+  background: linear-gradient(to right, #9926f0, #d122e3);
+  color: #fff;
+}
+
+.btn-call-slide:hover .icon {
+  transform: translateX(-4px);
+}
+
+.btn-call-slide:hover .text {
+  transform: translateX(4px);
+}
+
+/* Call button – slide in */
+@keyframes slideIn {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.btn-call-slide-in {
+  background: linear-gradient(to right, #9926f0, #d122e3);
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  animation: slideIn 0.8s ease forwards;
+  box-shadow: 0 10px 25px rgba(209, 34, 227, 0.35);
+}
+
+.video-box {
+  position: relative;
+  display: inline-block;
+}
+
+.video-box img {
+  display: block;
+  border-radius: 1rem;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #9926f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.play-btn:hover {
+  background: linear-gradient(to right, #9926f0, #d122e3);
+  color: #fff;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.display-2 {
+  margin-bottom: 1rem;
+  text-transform: none;
+  font-family: "Poppins", sans-serif;
+}
+.display-2--intro {
+  display: inline-block;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+.display-2--description {
+  font-size: 1.4rem;
+  display: block;
+  margin-top: 1.2rem;
+  text-transform: none;
+}
+
+.menu {
+  background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
+}
+.menu #flomirEvents {
+  color: white;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: xx-large;
+}
+.menu li {
+  padding: 0 0.7rem;
+}
+.menu li a {
+  color: #fff !important;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.intro-section {
+  background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
+  padding: 10rem 0 0 0;
+  width: 100%;
+  height: 100%;
+}
 
 /*# sourceMappingURL=style.css.map */
