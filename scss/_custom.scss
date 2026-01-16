@@ -1,7 +1,8 @@
 //My theme colors
-$purple-dark: #9926f0;
-$purple-light: #bb6ef5;
-$pink: #d122e3;
+// Gold palette (premium)
+$gold-dark: #b8962e; // auriu elegant (primary)
+$gold: #d4af37; // gold clasic (highlight)
+$gold-light: #f1d27a; // champagne / luxury accent
 
 //White and gray colors
 $white: #fff;
@@ -16,11 +17,12 @@ $gray-800: #343a40;
 $gray-900: #212529;
 $black: #000;
 
-$primary: $purple-dark;
-$secondary: $pink;
+$primary: $gold-dark;
+$secondary: $gold;
 
 //Accordion overrides
-$accordion-icon-color: $primary;
-$accordion-icon-active-color: $secondary;
+$accordion-icon-color: $gold;
+$accordion-icon-active-color: $gold-light;
+
 //Import bootstrap
 @import "../node_modules//bootstrap/scss/bootstrap.scss";
