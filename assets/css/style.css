@@ -12330,4 +12330,45 @@ textarea.form-control-lg {
     width: 100%;
     height: auto;
   }
+}
+.testimonials {
+  position: relative;
+  padding: 0;
+  background: linear-gradient(to right, rgba(184, 150, 46, 0.95), rgba(212, 175, 55, 0.95));
+}
+
+.testimonials .testimonial-content {
+  max-width: 720px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.35);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  border: 1px solid rgba(218, 165, 32, 0.35);
+}
+.testimonials .carousel-item p {
+  font-size: 1.05rem;
+}
+.testimonials .carousel-item small {
+  opacity: 0.85;
+}
+
+.testimonials .fa-star {
+  color: #d4af37;
+  margin-right: 2px;
+}
+
+.testimonials .carousel-indicators {
+  bottom: -30px;
+}
+.testimonials .carousel-indicators button {
+  width: 30px;
+  height: 4px;
+  margin: 0 6px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+.testimonials .carousel-indicators .active {
+  background-color: #d4af37;
+  width: 40px;
 }/*# sourceMappingURL=style.css.map */

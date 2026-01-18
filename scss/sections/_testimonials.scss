@@ -1,0 +1,52 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.testimonials {
+  position: relative;
+  padding: 0;
+  @include gradient;
+}
+
+.testimonials {
+  .testimonial-content {
+    max-width: 720px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(218, 165, 32, 0.35); // gold subtil
+  }
+
+  .carousel-item p {
+    font-size: 1.05rem;
+  }
+
+  .carousel-item small {
+    opacity: 0.85;
+  }
+}
+
+.testimonials {
+  .fa-star {
+    color: #d4af37; // auriu clasic
+    margin-right: 2px;
+  }
+}
+.testimonials {
+  .carousel-indicators {
+    bottom: -30px; // le cobori puțin
+
+    button {
+      width: 30px; // lungimea liniuței
+      height: 4px; // grosimea
+      margin: 0 6px; // SPAȚIERE între ele 🔑
+      border-radius: 2px;
+      background-color: rgba(255, 255, 255, 0.5);
+      transition: all 0.3s ease;
+    }
+
+    .active {
+      background-color: #d4af37; // gold
+      width: 40px; // activ mai lung
+    }
+  }
+}
