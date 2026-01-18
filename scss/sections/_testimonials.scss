@@ -5,48 +5,150 @@
   position: relative;
   padding: 0;
   @include gradient;
-}
 
-.testimonials {
-  .testimonial-content {
-    max-width: 720px;
-    margin: 0 auto;
-    background: rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(218, 165, 32, 0.35); // gold subtil
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.15);
+    pointer-events: none;
   }
 
-  .carousel-item p {
-    font-size: 1.05rem;
-  }
-
-  .carousel-item small {
-    opacity: 0.85;
+  .container {
+    position: relative;
+    z-index: 1;
   }
 }
 
-.testimonials {
-  .fa-star {
-    color: #d4af37; // auriu clasic
-    margin-right: 2px;
+.testimonial-card {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+
+  padding: 2.5rem 3rem;
+  border-radius: 22px;
+
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.18);
+}
+
+.testimonial-content {
+  background: #fff !important;
+  border-radius: 22px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.18);
+  color: #111;
+}
+
+.testimonial-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #222;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-meta strong {
+  display: block;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #111;
+}
+
+.testimonial-meta span {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.testimonial-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.4rem;
+  gap: 1rem;
+}
+
+.stars i {
+  color: #111;
+  font-size: 0.85rem;
+}
+
+.service {
+  font-size: 0.75rem;
+  color: #444;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.6);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    padding: 1.8rem 1.4rem;
+    border-radius: 18px;
+  }
+
+  .testimonial-footer {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
+
+/* === Carousel arrows – Testimonials === */
 .testimonials {
-  .carousel-indicators {
-    bottom: -30px; // le cobori puțin
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 48px;
+    height: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+  }
 
-    button {
-      width: 30px; // lungimea liniuței
-      height: 4px; // grosimea
-      margin: 0 6px; // SPAȚIERE între ele 🔑
-      border-radius: 2px;
-      background-color: rgba(255, 255, 255, 0.5);
-      transition: all 0.3s ease;
-    }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-image: none; // scoatem icon-ul default Bootstrap
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
 
-    .active {
-      background-color: #d4af37; // gold
-      width: 40px; // activ mai lung
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.25s ease;
+  }
+
+  /* icon săgeată */
+  .carousel-control-prev-icon::after,
+  .carousel-control-next-icon::after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 1rem;
+    color: #111; // negru
+  }
+
+  .carousel-control-prev-icon::after {
+    content: "\f053"; // fa-chevron-left
+  }
+
+  .carousel-control-next-icon::after {
+    content: "\f054"; // fa-chevron-right
+  }
+
+  /* hover – auriu */
+  .carousel-control-prev:hover .carousel-control-prev-icon,
+  .carousel-control-next:hover .carousel-control-next-icon {
+    background: #c9a24d; // auriu elegant
+    border-color: #c9a24d;
+
+    &::after {
+      color: #111;
     }
   }
 }
