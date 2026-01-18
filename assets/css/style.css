@@ -12337,6 +12337,14 @@ textarea.form-control-lg {
   background: linear-gradient(to right, rgba(184, 150, 46, 0.95), rgba(212, 175, 55, 0.95));
 }
 
+.testimonials svg:first-child {
+  margin-bottom: -1px;
+}
+
+.testimonials svg:last-child {
+  margin-top: -1px;
+}
+
 .testimonial-card {
   position: relative;
   max-width: 720px;
@@ -12456,4 +12464,131 @@ textarea.form-control-lg {
 .testimonials .carousel-control-prev:hover .carousel-control-prev-icon::after,
 .testimonials .carousel-control-next:hover .carousel-control-next-icon::after {
   color: #111;
+}
+
+#faq,
+.faq {
+  position: relative;
+  padding: 3.5rem 0;
+}
+#faq .container,
+.faq .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Wrapper */
+#faq .accordion,
+.faq .accordion {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Accordion item (card look) */
+#faq .accordion-item,
+.faq .accordion-item {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 14px;
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Because it's flush, remove default borders inside */
+#faq .accordion-flush .accordion-item,
+.faq .accordion-flush .accordion-item {
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Header button */
+#faq .accordion-button,
+.faq .accordion-button {
+  background: transparent;
+  color: #111;
+  font-weight: 700;
+  font-size: 1.02rem;
+  padding: 1.05rem 1.2rem;
+  border: 0;
+  box-shadow: none !important;
+  transition: all 0.2s ease;
+}
+
+/* Hover feel */
+#faq .accordion-button:hover,
+.faq .accordion-button:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+/* Active(open) state */
+#faq .accordion-button:not(.collapsed),
+.faq .accordion-button:not(.collapsed) {
+  color: #111;
+  background: rgba(201, 162, 77, 0.12);
+}
+
+/* Focus ring (gold) */
+#faq .accordion-button:focus,
+.faq .accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(201, 162, 77, 0.35) !important;
+}
+
+/* Arrow icon (make it gold/black) */
+#faq .accordion-button::after,
+.faq .accordion-button::after {
+  filter: grayscale(1) brightness(0.25);
+  opacity: 0.9;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* When open, keep arrow elegant (slightly gold) */
+#faq .accordion-button:not(.collapsed)::after,
+.faq .accordion-button:not(.collapsed)::after {
+  filter: sepia(1) saturate(5) hue-rotate(10deg) brightness(0.9);
+}
+
+/* Body */
+#faq .accordion-body,
+.faq .accordion-body {
+  padding: 1rem 1.2rem 1.2rem;
+  color: #222;
+  line-height: 1.75;
+  font-size: 0.98rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Small “gold accent line” on the left (premium) */
+#faq .accordion-item,
+.faq .accordion-item {
+  position: relative;
+}
+
+#faq .accordion-item::before,
+.faq .accordion-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: #c9a24d;
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #faq .accordion-item,
+  .faq .accordion-item {
+    border-radius: 14px;
+  }
+  #faq .accordion-button,
+  .faq .accordion-button {
+    font-size: 0.98rem;
+    padding: 0.95rem 1rem;
+  }
+  #faq .accordion-body,
+  .faq .accordion-body {
+    padding: 0.9rem 1rem 1.05rem;
+  }
 }/*# sourceMappingURL=style.css.map */

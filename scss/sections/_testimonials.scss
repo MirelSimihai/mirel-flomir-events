@@ -6,6 +6,13 @@
   padding: 0;
   @include gradient;
 }
+.testimonials svg:first-child {
+  margin-bottom: -1px;
+}
+
+.testimonials svg:last-child {
+  margin-top: -1px;
+}
 
 .testimonial-card {
   position: relative;
