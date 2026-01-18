@@ -12336,17 +12336,6 @@ textarea.form-control-lg {
   padding: 0;
   background: linear-gradient(to right, rgba(184, 150, 46, 0.95), rgba(212, 175, 55, 0.95));
 }
-.testimonials::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.15);
-  pointer-events: none;
-}
-.testimonials .container {
-  position: relative;
-  z-index: 1;
-}
 
 .testimonial-card {
   position: relative;
