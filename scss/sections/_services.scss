@@ -1,0 +1,74 @@
+.services {
+  padding: 0; // scoatem padding-ul mare
+
+  .row {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    @media (min-width: 992px) {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .services__content {
+    padding: 0.5rem 0;
+  }
+
+  .services__pic {
+    padding: 0.5rem 0;
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 1.2rem;
+  }
+}
+
+/* =========================
+   SERVICES – MOBILE FIX
+   ========================= */
+@media (max-width: 768px) {
+  .services {
+    .row {
+      // toate coloanele pe full width
+      > [class*="col-"] {
+        width: 100%;
+      }
+
+      // coloana care CONȚINE poza → prima
+      > [class*="col-"]:has(.services__pic) {
+        order: 1;
+      }
+
+      // coloana care CONȚINE textul → a doua
+      > [class*="col-"]:has(.services__content) {
+        order: 2;
+      }
+    }
+
+    .services__content {
+      padding: 0 0.75rem;
+      text-align: center !important;
+    }
+
+    .services__pic {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 260px; // sau cât vrei tu
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

@@ -3,7 +3,54 @@
 
 .intro-section {
   @include gradient;
-  padding: 4rem 0 0 0;
+  padding: 8rem 0 0 0;
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 768px) {
+  .intro-section {
+    padding-top: 6rem;
+    text-align: center;
+
+    h1 {
+      font-size: 1.8rem;
+      line-height: 1.3;
+    }
+
+    .display-2--description {
+      font-size: 1rem;
+      margin-top: 0.75rem;
+    }
+
+    // containerul imaginii
+    .video-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+
+    // imaginea propriu-zisă
+    .video-box {
+      position: relative; // 🔑 esențial
+      display: inline-block;
+
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .play-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); // 🎯 centru perfect
+        font-size: 3rem;
+        color: #fff;
+        z-index: 2;
+      }
+    }
+  }
 }
