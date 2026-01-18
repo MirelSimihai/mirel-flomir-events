@@ -1005,6 +1005,152 @@
         </div>
       </div>
     </section>
+
+    <!-- //////////// Portofolio SECTION //////////// -->
+    <section id="portofolio" class="portofolio">
+      <div class="container">
+        <div class="row text-center mt-5">
+          <h1 class="display-3 fw-bold">Proiecte recente</h1>
+          <div class="heading-line"></div>
+          <p class="lead">
+            Fiecare eveniment spune o poveste. Descoperă câteva dintre cele mai
+            recente proiecte Flomir Events și emoțiile surprinse în imagini.
+          </p>
+        </div>
+      </div>
+
+      <!-- imagini portofoliu -->
+      <div class="container">
+        <div class="row g-4 portfolio-grid">
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="portfolio-item"
+              data-bs-toggle="modal"
+              data-bs-target="#portfolioModal"
+              data-img="images/portofolio/360.jpg"
+              data-title="Platformă 360°"
+            >
+              <img src="images/portofolio/360.jpg" alt="Platformă 360°" />
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="portfolio-item"
+              data-bs-toggle="modal"
+              data-bs-target="#portfolioModal"
+              data-img="images/portofolio/bar mobil.jpg"
+              data-title="Bar mobil"
+            >
+              <img src="images/portofolio/bar mobil.jpg" alt="Bar mobil" />
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 center-bottom">
+            <div
+              class="portfolio-item"
+              data-bs-toggle="modal"
+              data-bs-target="#portfolioModal"
+              data-img="images/portofolio/cabina.jpg"
+              data-title="Cabină foto"
+            >
+              <img src="images/portofolio/cabina.jpg" alt="Cabină foto" />
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="portfolio-item"
+              data-bs-toggle="modal"
+              data-bs-target="#portfolioModal"
+              data-img="images/portofolio/decor flori.jpg"
+              data-title="Decor floral"
+            >
+              <img src="images/portofolio/decor flori.jpg" alt="Decor floral" />
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="portfolio-item"
+              data-bs-toggle="modal"
+              data-bs-target="#portfolioModal"
+              data-img="images/portofolio/decorgatit.jpg"
+              data-title="Decor gătit"
+            >
+              <img src="images/portofolio/decorgatit.jpg" alt="Decor gătit" />
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="portfolio-item"
+              data-bs-toggle="modal"
+              data-bs-target="#portfolioModal"
+              data-img="images/portofolio/foto-corner.jpg"
+              data-title="Foto corner"
+            >
+              <img src="images/portofolio/foto-corner.jpg" alt="Foto corner" />
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="portfolio-item"
+              data-bs-toggle="modal"
+              data-bs-target="#portfolioModal"
+              data-img="images/portofolio/oglinda foto.jpg"
+              data-title="Oglindă foto"
+            >
+              <img
+                src="images/portofolio/oglinda foto.jpg"
+                alt="Oglindă foto"
+              />
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="portfolio-item"
+              data-bs-toggle="modal"
+              data-bs-target="#portfolioModal"
+              data-img="images/portofolio/tort de shoturi.jpg"
+              data-title="Tort de shoturi"
+            >
+              <img
+                src="images/portofolio/tort de shoturi.jpg"
+                alt="Tort de shoturi"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Modal -->
+    <div
+      class="modal fade"
+      id="portfolioModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 rounded-4 overflow-hidden">
+          <div class="modal-header border-0">
+            <h5 class="modal-title fw-bold" id="portfolioModalTitle"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body p-0">
+            <img id="portfolioModalImg" src="" class="img-fluid w-100" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- bootstrap script -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
@@ -1040,6 +1186,29 @@
       videoModal.addEventListener("hidden.bs.modal", () => {
         iframe.src = ""; // oprește complet la orice închidere
       });
+    </script>
+    <script>
+      const portfolioModal = document.getElementById("portfolioModal");
+      const modalImg = document.getElementById("portfolioModalImg");
+      const modalTitle = document.getElementById("portfolioModalTitle");
+
+      if (portfolioModal) {
+        portfolioModal.addEventListener("show.bs.modal", function (event) {
+          const trigger = event.relatedTarget;
+          const imgSrc = trigger.getAttribute("data-img");
+          const title = trigger.getAttribute("data-title");
+
+          modalImg.src = imgSrc;
+          modalTitle.textContent = title;
+          modalImg.alt = title;
+        });
+
+        portfolioModal.addEventListener("hidden.bs.modal", function () {
+          modalImg.src = "";
+          modalTitle.textContent = "";
+          modalImg.alt = "";
+        });
+      }
     </script>
   </body>
 </html>
