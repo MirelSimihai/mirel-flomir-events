@@ -1,5 +1,9 @@
 @use "../custom" as *;
 @use "../components/mixins" as *;
+
+.portofolio {
+  padding-bottom: 4rem;
+}
 .portfolio-item {
   cursor: pointer;
 

@@ -1,0 +1,122 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.get-started {
+  padding: 4rem 0;
+  background-color: $gray-300;
+}
+
+.cta-info {
+  padding: 3rem;
+  margin: 1rem 0;
+
+  &__list {
+    position: relative;
+    list-style-type: none;
+    display: block;
+  }
+}
+
+#form-card {
+  border-radius: 20px;
+}
+
+//form styling
+
+.get-started,
+.contact-section {
+  background-color: $gray-300;
+  padding: 4rem 0;
+}
+
+/* Card formular – fundal alb */
+.get-started .form,
+.contact-section .form {
+  background: $white;
+  border-radius: 18px;
+  padding: 1.5rem;
+}
+
+/* Titlu formu  lar */
+.get-started h4,
+.contact-section h4 {
+  color: $gray-900;
+  margin-bottom: 1rem;
+}
+
+/* Labels */
+.get-started .form-label,
+.contact-section .form-label {
+  color: $gray-800;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+/* Input-uri & textarea */
+.get-started .form-control,
+.contact-section .form-control {
+  border-radius: 12px;
+  border: 1px solid $gray-400;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.95rem;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &::placeholder {
+    color: $gray-600;
+  }
+
+  &:focus {
+    border-color: $gold;
+    box-shadow: 0 0 0 0.2rem rgba($gold, 0.25);
+  }
+}
+
+/* Radio buttons */
+.get-started .form-check-input,
+.contact-section .form-check-input {
+  border-color: $gray-500;
+
+  &:checked {
+    background-color: $gold;
+    border-color: $gold;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba($gold, 0.25);
+  }
+}
+
+/* Text radio */
+.get-started .form-check-label,
+.contact-section .form-check-label {
+  color: $gray-800;
+}
+
+/* Buton submit – auriu premium */
+.get-started .btn-primary,
+.contact-section .btn-primary {
+  background: linear-gradient(135deg, $gold 0%, $gold-dark 100%);
+  border: none;
+  color: $black;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.75rem 1.6rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+  .get-started,
+  .contact-section {
+    padding: 3rem 0;
+  }
+}

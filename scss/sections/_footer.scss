@@ -1,0 +1,60 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.footer {
+  padding-top: 1rem;
+  background-color: $footer;
+}
+
+// style the contact box content
+.contact-box {
+  position: relative;
+
+  &__icon {
+    width: 2rem;
+    stroke: $primary;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+    @include media-breakpoint-up(sm) {
+      width: 4rem;
+    }
+  }
+
+  &__info {
+    padding: 0.4rem;
+
+    &--title {
+      color: $white;
+      text-decoration: none;
+      font-size: 1rem;
+
+      @include media-breakpoint-up(sm) {
+        font-size: 1.4 rem;
+      }
+    }
+
+    &--subtitle {
+      font-size: 0.8rem;
+      color: $gray-600;
+      text-decoration: none;
+      @include media-breakpoint-up(sm) {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+// Social media content
+a {
+  color: $white;
+  i {
+    font-size: 1rem;
+    margin-left: 1rem;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 1.6rem;
+    }
+  }
+}
